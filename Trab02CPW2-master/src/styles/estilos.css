@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "decora";
+  src: url(../fonts/IndieFlower-Regular.ttf);
+}
+@font-face {
+  font-family: "padro";
+  src: url(../fonts/FjallaOne-Regular.ttf);
+}
+body {
+  margin: 0px;
+  display: inline;
+}
+
+.cabecadetudo {
+  font-size: 140%;
+  text-align: center;
+  background-color: #20507D;
+  padding: 40px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px #dbd9d9;
+}
+.cabecadetudo * {
+  display: inline;
+  vertical-align: middle;
+}
+.cabecadetudo h1 {
+  font-family: "decora";
+  color: white;
+}
+
+#lista {
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px black, -2px -2px black;
+}
+#lista label, #lista input, #lista select, #lista button {
+  display: block;
+  font-family: "padro";
+}
+#lista button {
+  background-color: #2B2C28;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+#lista button:hover {
+  color: white;
+}
+#lista #unidadeDeMedida {
+  font-family: "padro";
+}
+#lista label {
+  margin-top: 20px;
+}
+#lista #quantidade, #lista #unidadeDeMedida {
+  display: inline-block;
+}
+#lista select {
+  width: 95%;
+  max-width: 300px;
+}
+#lista select:disabled {
+  color: red;
+}
+#lista select, #lista input {
+  height: 30px;
+  font-size: 100%;
+  border-radius: 5px;
+  border: 1px solid #0c302e;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+#lista select[type=number],
+#lista input[type=number] {
+  width: 95%;
+  max-width: 80px;
+}
+
+fieldset {
+  margin: 10px;
+}
+fieldset #conteudo {
+  padding: 30px;
+  margin: auto;
+}
+fieldset #tabelaCompras {
+  padding: 10px;
+  width: 90%;
+}
+fieldset #tabelaCompras table {
+  border-collapse: collapse;
+  width: 50%;
+  font-family: "padro";
+}
+fieldset #tabelaCompras table thead {
+  background-color: #f7fdff;
+  color: white;
+}
+fieldset #tabelaCompras table tr:hover td {
+  background-color: #d7f2ec;
+}
+fieldset #tabelaCompras table tr:nth-child(even) {
+  background-color: #e5e2ec;
+}
+fieldset #tabelaCompras table tr td {
+  font-size: 90%;
+}
+fieldset #tabelaCompras table tr td:last-child {
+  width: 40%;
+}
+fieldset #tabelaCompras table tr th, fieldset #tabelaCompras table tr td {
+  text-align: left;
+  padding: 5px 0px;
+}
+fieldset #tabelaCompras table tr th:first-child, fieldset #tabelaCompras table tr td:first-child {
+  text-align: left;
+  padding-left: 5px;
+}
+fieldset #tabelaCompras table tr th:last-child,
+fieldset #tabelaCompras table tr td:last-child {
+  text-align: right;
+  padding-right: 5px;
+}
+fieldset #tabelaCompras table tr th img, fieldset #tabelaCompras table tr td img {
+  width: 20%;
+  margin: 0px;
+}
+fieldset #tabelaCompras img {
+  margin-left: 40px;
+  display: block;
+  width: 10%;
+}
+fieldset #tabelaCompras span {
+  font-family: "padro";
+}
+fieldset #cardsCompras {
+  display: none;
+}
+fieldset #cardsCompras #cardConteudo {
+  display: table;
+  box-shadow: 2px 2px 5px #ededee, -1px -1px 3px #ededee;
+  border-radius: 5px;
+  margin: 0px auto 10px auto;
+  width: 100%;
+}
+fieldset #cardsCompras #cardConteudo .esquerda,
+fieldset #cardsCompras #cardConteudo .direita {
+  width: 15%;
+  display: table-cell;
+}
+fieldset #cardsCompras #cardConteudo .direita {
+  text-align: right;
+}
+fieldset #cardsCompras #cardConteudo span {
+  vertical-align: middle;
+  font-family: "padro";
+  font-size: 150%;
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+}
+fieldset #cardsCompras a img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+}
+fieldset #filtro {
+  margin: 30px 0px 10px 0px;
+  display: block;
+  border-radius: 20px;
+  width: 40%;
+  height: 30px;
+  border: 1px solid #cccccc;
+  outline: none;
+  padding: 0px 20px 0px 20px;
+  font-size: 90%;
+  font-family: "padro";
+}
+fieldset #filtro:hover {
+  border: none;
+  box-shadow: 2px 2px 5px #cccccc, -1px -1px 3px #cccccc;
+  margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cabecadetudo {
+    font-size: 95%;
+  }
+
+  fieldset #tabelaCompras span {
+    font-size: 70%;
+  }
+  fieldset #cardsCompras #cardConteudo span {
+    font-size: 80%;
+  }
+
+  #conteudo #cardsCompras {
+    display: block;
+  }
+  #conteudo #cardsCompras span {
+    font-family: "padro";
+    font-size: 74%;
+  }
+  #conteudo #cardsCompras img {
+    border: none;
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+  }
+  #conteudo #cardsCompras #tabelaCompras {
+    display: none;
+  }
+  #conteudo #filtro {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

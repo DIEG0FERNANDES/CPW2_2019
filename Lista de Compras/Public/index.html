@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/styles/estilos.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <div id = header>
+        <img src="src/img/ico_ListaCompras_3387311.png" alt="Lista de Compras">
+        <h3>Lista de Compras</h3>
+    </div>
+
+    <div id="formularioListaItem">
+     <!--form onsubmit execute JS qdo um formulario for enviado-->
+        <form onsubmit="itemView.acrescentarItem(event)">
+            <label for="Item">Item</label>
+            <select required id="itens" name="tItem" type="text" onchange="anexarUnidadeDeMedida()">
+        <!--onchange (evento) ocorre qdo o valor do objeto for alterado; p/ botão: opção e cx seleção-->
+            <option value="itemView.anexarUnidadeDeMedida" disabled selected>Selecione um item</option>
+        </select>
+
+        <label for="quantidade">Quantidade:</label>
+        <input required id="tquantidade" type="number" min="0" max="99" name="cquantidade">
+        <div id="unidadeMedida"></div>
+        
+        <input type="submit" value="Adicionar">
+    </form>
+</div>
+
+<div id="minhaLista">
+    <h2>Minha Lista</h2>
+    <span></span>
+<div id="filtraItem">
+<!--onkeyup (atributo) acionado qdo usuário libera uma tecla (no teclado)-->
+<input onkeyup="itemView.escolherItens()" placeholder="Digite a descricao do item" type="text" id="filtro">
+  
+    <div id="cardsItem"></div>
+    <div id="tabelaItem"></div>
+</div>    
+
+    <script src="src/js/models/Item.js"></script>
+    <script src="src/js/controllers/ItemControllers.js"></script>
+    <script src="src/js/views/ItemView.js"></script>
+    <script src="src/js/mascaras.js"></script>
+    <script src="src/js/index.js"></script>
+
+</body>
+</html>

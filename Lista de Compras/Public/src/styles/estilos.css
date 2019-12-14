@@ -1,0 +1,80 @@
+body {
+    margin: 3px;
+    background-color: #f4f4f4;
+  }
+  
+  #header {
+    background-color: #4484CE;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #header * {
+    display: inline;
+    vertical-align: middle;
+    
+  }
+  #header img {
+    width: 70px;
+    margin-right: 550px;
+    
+  }
+  #header h3 {
+    color: white;
+    text-shadow: 2px 2px #555555;
+    text-align: center;
+        
+  }
+  #formularioListaItem {
+    padding: 5px;
+    border: 2px solid #d9d9d9;
+    width: 97%;
+    margin: auto;
+  }
+
+  #formularioacrescentarItem * {
+    outline: none;
+  }
+  #formularioListaItem label {
+    font-weight: bold;
+    font-size: 105%;
+    margin: 10px 0px;
+  }
+  #formularioListaItem label, #formularioListaItem select {
+    display: block;
+    font-family: "padrao";
+  }
+  #formularioListaItem input {
+    margin-bottom: 10px;
+    height: 25px;
+    font-size: 100%;
+    /*Opcional*/
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    padding-left: 5px;
+  }
+  #formularioListaItem input[type=number] {
+    width: 65px;
+    height: 25px;
+    display: inline;
+  }
+
+  #minhaLista {
+    padding: 2px;
+    border: 2px solid #d9d9d9;
+    width: 97%;
+    margin: auto;
+  }
+
+  #minhaLista img {
+    padding: 5px;
+    width: 90px;
+    margin: 10px;
+}
+
+
+
+
+
+  

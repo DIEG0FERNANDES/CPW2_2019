@@ -1,0 +1,52 @@
+Ferramental:
+
+- Browser que presta
+- Sass
+- VS Code
+- Node.js
+- Git e Github
+- Jest e Puppeteer (teste de software)
+- Webpack (gestão de dependência)
+
+Plugins Recomendados:
+
+- Auto Close Tag
+- Beautify
+- CSS Formatter
+- Material Icon Theme
+
+Instalando o servidor web no computador:
+- http-server
+- npm i -g http-server
+- http-server -c-1
+
+Caso o http-server "não funcione":
+- npm i -g serve
+- serve
+
+Atalhos para o console do browser:
+- F12
+- CTRL + SHIFT + I
+
+JavaScript tem a capacidade de manipular a árvore DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+@font-face
+{
+    font-family: "padrao";
+    src: url(/src/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face
+{
+    font-family: "decorativa";
+    src: url(/src/fonts/IndieFlower-Regular.ttf);
+}
+
+@font-face
+{
+    font-family: "padraoboxes";
+    src: url(/src/fonts/VT323-Regular.ttf);
+}
+
+$fonte-padrao: "padrao";
+$fonte-decorativa: "decorativa";
+$fonte-padraoboxes: "padraoboxes";

@@ -1,0 +1,73 @@
+@import "cores.scss";
+@import "fonts.scss";
+
+
+//altera o fundo todo do pagina web
+body
+{
+    margin: 0px;
+}
+
+//altera a cabeça ali da pagina web
+#banner
+{
+    background-color: $cor-banner;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    h1 {
+        font-family: $fonte-decorativa;
+        color: white;       
+        text-shadow: 2px 2px black;
+        text-shadow: 3px 3px $cor-sombras;
+    }
+}
+
+//altera o campo escrito Cor-Renderizada na pagina web
+#corRender
+{
+    background-color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+    h1
+    {
+        font-family: $fonte-padraoboxes;
+        color: white;
+        text-align: center;
+
+    }
+}
+
+//altera os inputs number
+#seletorCores
+{
+    padding: 10px;
+    border: 1px solid $cor-sombras;
+    width: 95%;
+    margin: auto;
+
+    label,input 
+    {
+        font-family: $fonte-padraoboxes;
+    }
+    input:blur {
+        background-color: white;
+    }
+    input 
+    {
+        
+        margin-top: 25px;
+        margin-bottom: 10px;
+        height: 20px;
+        font-size: 100%;
+        border-radius: 10px;
+        border: 1px solid $cor-sombras;
+        padding-left: 5px;
+
+        &[type=number]
+        {
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+#conteinerFormulario * {
+  display: block;
+  margin-bottom: 5px;
+}
+#conteinerFormulario button {
+  background-color: blue;
+  color: white;
+  font-size: 100%;
+}
+#conteinerFormulario input {
+  width: 50%;
+}
+
+#resultado {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=estilos.css.map */

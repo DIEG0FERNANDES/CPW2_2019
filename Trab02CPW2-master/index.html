@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/styles/estilos.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-png">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <title>Lista de Compras</title>
+</head>
+
+<body>
+    <div class="cabecadetudo">
+        <h1>Lista de Compras</h1>
+    </div>
+
+    <div id="lista">
+        <form onsubmit="itemView.salvarCompra(event)">
+            <label for="item">Item</label>
+            <select onchange="itemView.carregarUnidadeDeMedida(event)" required id="item" name="item">
+                <option value="" disabled selected>Selecione um item</option>
+            </select>
+
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="quantidade" id="quantidade" min="0" required>
+            <div id="unidadeDeMedida"> unidade de medida </div>
+
+            <button type="submit" value="Incluir">Adicionar</button>
+        </form>
+    </div>
+
+    <fieldset>
+        <div id="conteudo">
+            <input onkeyup="itemView.filtrarCompras()" placeholder="Digite a descrição do item" type="text"
+                id="filtro">
+
+            <div id="cardsCompras"></div>
+            <div id="tabelaCompras"></div>
+        </div>
+    </fieldset>
+
+
+    <script src="src/js/models/Item.js"></script>
+    <script src="src/js/models/Compra.js"></script>
+    <script src="src/js/controllers/ItemController.js"></script>
+    <script src="src/js/views/ItemView.js"></script>
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+@import 'cores';
+@import 'fontes';
+
+body {
+    margin: 0;
+}
+
+#header {
+    background-color: $cor-header;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    * {
+        display: inline;
+        vertical-align: middle;
+    }
+
+    img {
+        width: 70px;
+        margin-right: 20px;
+    }
+
+    h1 {
+        font-family: $fonte-decorativa;
+        color: white;
+        // Opcional
+        text-shadow: 2px 2px #555555;
+    }
+}
+
+#formularioContato {
+
+    padding: 10px;
+    border: 1px solid $cor-borda;
+    // Ajuste a largura ao seu gosto!
+    width: 95%;
+    margin: auto;
+
+    label,
+    input {
+        display: block;
+        font-family: $fonte-padrao;
+    }
+
+    input {
+        margin-bottom: 10px;
+        height: 20px;
+        font-size: 100%;
+        /* Daqui pra baixo é opcional */
+        border-radius: 5px;
+        border: 1px solid #aaaaaa;
+        padding-left: 5px;
+
+        &[type=text] {
+            width: 300px;
+        }
+
+        &[type=tel] {
+            width: 140px;
+        }
+
+        &[type=email] {
+            width: 200px;
+        }
+
+        &[type=submit] {
+            padding: 10px 20px;
+            /* Anula a altura padrão */
+            height: inherit;
+            background-color: $cor-botao-primario;
+            color: white;
+            border: none;
+        }
+    }
+}
+
+#tabelaContatos {
+    margin-top: 20px;
+
+    table {
+        border-collapse: collapse;
+        //border: 1px solid black;
+        //margin- para espaçamento embaixo usar como exemplo abaixo:
+        margin: 0px auto 50px auto;
+        width: 95%;
+        font-family: $fonte-padrao;
+        //para melhorar a visualização dentro da tabela, quando valores forem largos usar left:
+        //text-align: left;
+        
+
+        thead {
+            background-color: $cor-header;
+            color: white;
+        }
+        //Tratar as informações na tabela de forma independente à 1ª coluna, as colunas do meio e última coluna;
+        tr {
+
+            &:hover {
+                td {
+                    background-color: #eeeeee;
+                    font-size: 91%;
+                }
+            }
+
+         // Para inserir cores nas linhas. Conctenar com a tag tr
+         // Atinge apenas as linhas pares
+         &:nth-child(even) {
+             background-color: $cor-sombras;
+         }
+
+            td {
+                font-size: 90%;
+            }
+
+            th, td{
+                // Regra geral
+                text-align: center;
+                border: 1px solid $cor-borda;
+                padding: 5px 0px;
+
+                /*Regra especifica para a primeira coluna*/
+                &:first-child {
+                    text-align: left;
+                    padding-left: 5px;
+                }
+                /* para regra específica para coluna que quiser escolher
+                &:nth-child(3){
+                    text-align: left;
+                }*/
+                /*Regra especifica para a última coluna*/
+                &:last-child {
+                    text-align: right;
+                    padding: 0px 5px;
+                }
+            };
+        }
+    }
+}
+
+// Estilização dos cards
+
+//Para sumir com os cards na tela do computador
+#cardsContatos {
+    display: none;
+    padding: 5px 0px;
+
+// Cada div representa um card
+div {
+    border: 1px solid $cor-borda;
+    box-shadow: 3px 3px 3px $cor-borda;
+    margin: 0px auto 10px auto;
+    width: 86%;
+    border-radius: 5px;
+    padding: 13px 7px 7px 7px;
+
+    span {
+        font-family: $fonte-padrao;
+        font-size: 80%;
+        display: block;
+        text-indent: 36px;
+       
+
+        /*
+        Deixando a inicial e o restante do nome na mesma Linha
+        */
+
+        &:first-child, &:nth-child(2) {
+            text-indent: 0px;
+            display: inline-block;
+            font-size: 100%;
+            margin-bottom: -5px;
+
+        }
+
+        //Inicial do nome
+        &:first-child {
+            background-color: $cor-botao-primario;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 50%;
+            margin-right: 3px;
+
+
+        }
+    }
+}    
+}
+// Para sumir com a tabela no celular usar:
+@media only screen and (max-width: 600px) {
+    #cardsContatos {
+        display: block;
+    }
+
+    #tabelaContatos {
+        display: none;
+    }
+
+    #formularioContato{
+
+            width: 88%;
+
+        input [type=text]{
+            width: 250px;
+        }
+    }
+}

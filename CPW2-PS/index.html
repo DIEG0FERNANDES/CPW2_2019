@@ -1,0 +1,39 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/src/styles/estilos.css">
+    <title>Seletor de Cores</title>
+</head>
+<body>
+
+    <div id="banner">
+        <h1>Seletor de Cores</h1>
+    </div>
+    
+    <div id="seletorCores">
+        <form onsubmit="salvarCor()">
+
+            <label for="red">R: </label>
+            <input type="number" min="0" max="255" id="seletorCorR" placeholder="255" onchange="corRender()">
+
+            <label for="green">G: </label>
+            <input type="number" min="0" max="255" id="seletorCorG" placeholder="255">
+
+            <label for="blue">B: </label>
+            <input type="number" min="0" max="255" id="seletorCorB"  placeholder="255">
+
+            <input  type="submit" value="Adicionar">
+        </form>
+    </div>
+    <div id="corRender">
+        <h1>Cor_Renderizada</h1>
+    </div>
+    
+
+    <div id="inferno">este negocio de paleta de cores ta me dando uma dor de cabeçaaaaaaaaaaaaa!!</div>
+        
+    <script src="src/js/index.js"></script>
+</body>
+</html>

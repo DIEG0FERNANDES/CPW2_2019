@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "padrao";
+  src: url(/src/fonts/Quicksand-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "decorativa";
+  src: url(/src/fonts/IndieFlower-Regular.ttf);
+}
+@font-face {
+  font-family: "padraoboxes";
+  src: url(/src/fonts/VT323-Regular.ttf);
+}
+body {
+  margin: 0px;
+}
+
+#banner {
+  background-color: blue;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#banner h1 {
+  font-family: "decorativa";
+  color: white;
+  text-shadow: 2px 2px black;
+  text-shadow: 3px 3px #262730;
+}
+
+#corRender {
+  background-color: black;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+#corRender h1 {
+  font-family: "padraoboxes";
+  color: white;
+  text-align: center;
+}
+
+#seletorCores {
+  padding: 10px;
+  border: 1px solid #262730;
+  width: 95%;
+  margin: auto;
+}
+#seletorCores label, #seletorCores input {
+  font-family: "padraoboxes";
+}
+#seletorCores input:blur {
+  background-color: white;
+}
+#seletorCores input {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  height: 20px;
+  font-size: 100%;
+  border-radius: 10px;
+  border: 1px solid #262730;
+  padding-left: 5px;
+}
+#seletorCores input[type=number] {
+  width: 100px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
