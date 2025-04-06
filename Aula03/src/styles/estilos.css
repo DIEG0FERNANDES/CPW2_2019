@@ -5,18 +5,18 @@
   */
 @font-face {
   font-family: "decorativa";
-  src: url(../fonts/pacifico-regular.ttf);
+  src: url(../fonts/Pacifico-Regular.ttf);
 }
 @font-face {
   font-family: "padrao";
-  src: url(../fonts/Raleway-Regular.ttf);
+  src: url(../fonts/Lato-Regular.ttf);
 }
 body {
   margin: 0;
 }
 
 #header {
-  background-color: #f1a9a0;
+  background-color: #1ba39c;
   padding: 10px 20px;
   margin-bottom: 10px;
 }
@@ -36,7 +36,7 @@ body {
 
 #formularioContato {
   padding: 10px;
-  border: 1px solid #ffcb05;
+  border: 1px solid #1ba39c;
   width: 95%;
   margin: auto;
 }
@@ -67,9 +67,10 @@ body {
   padding: 10px 20px;
   /* Anula a altura padrão */
   height: inherit;
-  background-color: #f1a9a0;
+  background-color: #019875;
   color: white;
   border: none;
+  text-shadow: 1px 1px 1px #555555;
 }
 
 #tabelaContatos {
@@ -82,58 +83,71 @@ body {
   font-family: "padrao";
 }
 #tabelaContatos table thead {
-  background-color: #f1a9a0;
+  background-color: #1ba39c;
   color: white;
 }
 #tabelaContatos table tr:hover td {
   background-color: #eeeeee;
-  font-size: 91%;
 }
 #tabelaContatos table tr:nth-child(even) {
-  background-color: #c8f7c5;
+  background-color: #d7f2ec;
 }
 #tabelaContatos table tr td {
   font-size: 90%;
 }
-#tabelaContatos table tr th, #tabelaContatos table tr td {
-  text-align: center;
-  border: 1px solid #ffcb05;
-  padding: 5px 0px;
-  /*Regra especifica para a primeira coluna*/
-  /* para regra específica para coluna que quiser escolher
-  &:nth-child(3){
-      text-align: left;
-  }*/
-  /*Regra especifica para a última coluna*/
+#tabelaContatos table tr th {
+  text-shadow: 1px 1px 1px #555555;
 }
-#tabelaContatos table tr th:first-child, #tabelaContatos table tr td:first-child {
+#tabelaContatos table tr th,
+#tabelaContatos table tr td {
+  text-align: center;
+  padding: 5px 0px;
+  /*
+      Regra específica para a
+      primeira coluna
+   */
+  /*
+      Regra específica para a
+      última coluna
+   */
+}
+#tabelaContatos table tr th:first-child,
+#tabelaContatos table tr td:first-child {
   text-align: left;
   padding-left: 5px;
 }
-#tabelaContatos table tr th:last-child, #tabelaContatos table tr td:last-child {
+#tabelaContatos table tr th:last-child,
+#tabelaContatos table tr td:last-child {
   text-align: right;
-  padding: 0px 5px;
+  padding-right: 5px;
+}
+#tabelaContatos span {
+  margin-left: 30px;
+  font-family: "padrao";
 }
 
 #cardsContatos {
   display: none;
   padding: 5px 0px;
+  margin-top: 20px;
 }
 #cardsContatos div {
-  border: 1px solid #ffcb05;
-  box-shadow: 3px 3px 3px #ffcb05;
+  border: 1px solid #1ba39c;
+  box-shadow: 2px 2px #1ba39c;
   margin: 0px auto 10px auto;
-  width: 86%;
+  width: 90%;
   border-radius: 5px;
-  padding: 13px 7px 7px 7px;
+  padding: 10px 7px 7px 7px;
 }
 #cardsContatos div span {
   font-family: "padrao";
   font-size: 80%;
   display: block;
-  text-indent: 36px;
+  text-indent: 42px;
   /*
-  Deixando a inicial e o restante do nome na mesma Linha
+      Deixando a inicial e o
+      restante do nome na mesma
+      linha.
   */
 }
 #cardsContatos div span:first-child, #cardsContatos div span:nth-child(2) {
@@ -143,11 +157,35 @@ body {
   margin-bottom: -5px;
 }
 #cardsContatos div span:first-child {
-  background-color: #f1a9a0;
+  background-color: #019875;
   color: white;
-  padding: 6px 10px;
+  padding: 10px 15px;
   border-radius: 50%;
   margin-right: 3px;
+}
+#cardsContatos span {
+  display: block;
+  text-align: center;
+  font-family: "padrao";
+}
+
+/*
+    Campo de filtro
+*/
+#filtro {
+  margin: 30px auto 0px auto;
+  display: block;
+  border-radius: 20px;
+  width: 50%;
+  height: 35px;
+  border: 1px solid #cccccc;
+  outline: none;
+  text-indent: 20px;
+  font-size: 90%;
+}
+#filtro:hover {
+  border: none;
+  box-shadow: 1px 1px 5px #dddddd, -1px -1px 3px #dddddd;
 }
 
 @media only screen and (max-width: 600px) {
@@ -162,8 +200,12 @@ body {
   #formularioContato {
     width: 88%;
   }
-  #formularioContato input [type=text] {
+  #formularioContato input[type=text] {
     width: 250px;
+  }
+
+  #filtro {
+    width: 85%;
   }
 }
 

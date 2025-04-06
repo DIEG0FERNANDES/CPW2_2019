@@ -70,6 +70,7 @@ body {
             background-color: $cor-botao-primario;
             color: white;
             border: none;
+            text-shadow: 1px 1px 1px #555555;
         }
     }
 }
@@ -79,114 +80,152 @@ body {
 
     table {
         border-collapse: collapse;
-        //border: 1px solid black;
-        //margin- para espaçamento embaixo usar como exemplo abaixo:
         margin: 0px auto 50px auto;
         width: 95%;
         font-family: $fonte-padrao;
-        //para melhorar a visualização dentro da tabela, quando valores forem largos usar left:
-        //text-align: left;
-        
 
         thead {
             background-color: $cor-header;
             color: white;
         }
-        //Tratar as informações na tabela de forma independente à 1ª coluna, as colunas do meio e última coluna;
+
         tr {
 
             &:hover {
                 td {
                     background-color: #eeeeee;
-                    font-size: 91%;
                 }
             }
 
-         // Para inserir cores nas linhas. Conctenar com a tag tr
-         // Atinge apenas as linhas pares
-         &:nth-child(even) {
-             background-color: $cor-sombras;
-         }
+            // Atinge apenas as linhas pares
+            &:nth-child(even) {
+                background-color: $cor-sombras;
+            }
 
             td {
                 font-size: 90%;
             }
 
-            th, td{
+            th {
+                text-shadow: 1px 1px 1px #555555;
+            }
+
+            th,
+            td {
                 // Regra geral
                 text-align: center;
-                border: 1px solid $cor-borda;
                 padding: 5px 0px;
+                //border: 1px solid $cor-borda;
 
-                /*Regra especifica para a primeira coluna*/
+                /*
+                    Regra específica para a
+                    primeira coluna
+                 */
                 &:first-child {
                     text-align: left;
                     padding-left: 5px;
                 }
-                /* para regra específica para coluna que quiser escolher
-                &:nth-child(3){
-                    text-align: left;
-                }*/
-                /*Regra especifica para a última coluna*/
+
+                //&:nth-child()
+
+                /*
+                    Regra específica para a
+                    última coluna
+                 */
                 &:last-child {
                     text-align: right;
-                    padding: 0px 5px;
+                    padding-right: 5px;
                 }
-            };
+            }
         }
+    }
+
+    span {
+        margin-left: 30px;
+        font-family: $fonte-padrao;
     }
 }
 
 // Estilização dos cards
 
-//Para sumir com os cards na tela do computador
 #cardsContatos {
+
     display: none;
     padding: 5px 0px;
+    margin-top: 20px;
 
-// Cada div representa um card
-div {
-    border: 1px solid $cor-borda;
-    box-shadow: 3px 3px 3px $cor-borda;
-    margin: 0px auto 10px auto;
-    width: 86%;
-    border-radius: 5px;
-    padding: 13px 7px 7px 7px;
+    // Cada div representa um card
+    div {
+        border: 1px solid $cor-borda;
+        box-shadow: 2px 2px $cor-borda;
+        margin: 0px auto 10px auto;
+        width: 90%;
+        border-radius: 5px;
+        padding: 10px 7px 7px 7px;
 
-    span {
-        font-family: $fonte-padrao;
-        font-size: 80%;
-        display: block;
-        text-indent: 36px;
-       
+        span {
+            font-family: $fonte-padrao;
+            font-size: 80%;
+            display: block;
+            text-indent: 42px;
 
-        /*
-        Deixando a inicial e o restante do nome na mesma Linha
-        */
+            /*
+                Deixando a inicial e o
+                restante do nome na mesma
+                linha.
+            */
+            &:first-child,
+            &:nth-child(2) {
+                text-indent: 0px;
+                display: inline-block;
+                font-size: 100%;
+                margin-bottom: -5px;
+            }
 
-        &:first-child, &:nth-child(2) {
-            text-indent: 0px;
-            display: inline-block;
-            font-size: 100%;
-            margin-bottom: -5px;
-
-        }
-
-        //Inicial do nome
-        &:first-child {
-            background-color: $cor-botao-primario;
-            color: white;
-            padding: 6px 10px;
-            border-radius: 50%;
-            margin-right: 3px;
-
-
+            // Inicial do nome
+            &:first-child {
+                background-color: $cor-botao-primario;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 50%;
+                margin-right: 3px;
+            }
         }
     }
-}    
+
+    span {
+        display: block;
+        text-align: center;
+        font-family: $fonte-padrao;
+    }
 }
-// Para sumir com a tabela no celular usar:
+
+
+/*
+    Campo de filtro
+*/
+
+#filtro {
+    margin: 30px auto 0px auto;
+    display: block;
+    border-radius: 20px;
+    width: 50%;
+    height: 35px;
+    border: 1px solid #cccccc;
+    outline: none;
+    text-indent: 20px;
+    //text-align: center;
+    font-size: 90%;
+
+    &:hover {
+        border: none;
+        box-shadow: 1px 1px 5px #dddddd,
+            -1px -1px 3px #dddddd;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+
     #cardsContatos {
         display: block;
     }
@@ -195,12 +234,16 @@ div {
         display: none;
     }
 
-    #formularioContato{
+    #formularioContato {
 
-            width: 88%;
+        width: 88%;
 
-        input [type=text]{
+        input[type=text] {
             width: 250px;
         }
+    }
+
+    #filtro {
+        width: 85%;
     }
 }

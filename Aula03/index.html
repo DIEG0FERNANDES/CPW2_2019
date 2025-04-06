@@ -16,12 +16,12 @@
 <body>
 
     <div id="header">
-        <img src="src/img/AgendaLogo.png" alt="Agenda">
+        <img src="src/img/logo.png" alt="Agenda">
         <h1>Agenda</h1>
     </div>
 
     <div id="formularioContato">
-        <form onsubmit="salvarContato(event)">
+        <form onsubmit="contatoView.salvarContato(event)">
             <label for="nome">Nome</label>
             <input required id="nome" name="nome" type="text">
 
@@ -39,16 +39,19 @@
         </form>
     </div>
 
-    
-    <input onkeyup="filtrarContatos()"placeholder="Digite o nome ou e-mail" type="text" id='filtro'>
+    <input onkeyup="contatoView.filtrarContatos()" placeholder="Digite o nome ou e-mail" type="text" id="filtro">
 
     <div id="cardsContatos"></div>
     <div id="tabelaContatos"></div>
-   
 
 
     <script src="src/js/mascaras.js"></script>
+    <script src="src/js/helpers/DataHelper.js"></script>
+    <script src="src/js/models/Contato.js"></script>
+    <script src="src/js/controllers/ContatoController.js"></script>
+    <script src="src/js/views/ContatoView.js"></script>
     <script src="src/js/index.js"></script>
+
 </body>
 
 </html>
